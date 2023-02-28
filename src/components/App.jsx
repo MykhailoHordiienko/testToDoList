@@ -1,16 +1,18 @@
+import { ToDoForm } from './ToDoForm/ToDoForm';
+import { ToDoTable } from './ToDoTable/ToDoTable';
+
 export const App = () => {
   return (
     <div
       style={{
         height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
+        padding: 20,
+        fontSize: 20,
+        color: '#010101',
       }}
     >
-      React homework template
+      <ToDoForm />
+      <ToDoTable />
     </div>
   );
 };
