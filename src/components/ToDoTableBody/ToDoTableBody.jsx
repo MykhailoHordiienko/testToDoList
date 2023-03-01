@@ -1,40 +1,23 @@
-import React from 'react';
+import { ToDoTableItem } from 'components/ToDoTableItem/ToDoTableItem';
+import { useSelector } from 'react-redux';
 
-export const ToDoTableBody = () => {
+export const ToDoTableBody = ({ toggleModal }) => {
+  const toDoListState = useSelector(state => state.toDosList);
+
   return (
-    <tbody style={{ backgroundColor: 'teal' }}>
-      <tr style={{ border: '1px dashed black' }}>
-        <td>
-          <p style={{ textAlign: 'center' }}>1</p>
-        </td>
-        <td>
-          <p
-            style={{
-              display: 'block',
-              width: 200,
-              overflow: 'hidden',
-              textOverflow: 'ellipsis',
-            }}
-          >
-            lorem20sefhsoifhsifhosihfoishoidfhosidhfoishdoifhosidhfoishdoifh
-          </p>
-        </td>
-        <td>
-          <p
-            style={{
-              display: 'block',
-              width: 200,
-              overflow: 'hidden',
-              textOverflow: 'ellipsis',
-            }}
-          >
-            lorem20sefhsoifhsifhosihfoishoidfhosidhfoishdoifhosidhfoishdoifh
-          </p>
-        </td>
-        <td style={{ textAlign: 'center' }}>
-          <input type="checkbox"></input>
-        </td>
-      </tr>
-    </tbody>
+    <>
+      <tbody style={{ backgroundColor: 'teal' }}>
+        {toDoListState.map(toDo => (
+          <ToDoTableItem
+            toggleModal={toggleModal}
+            key={toDo.id}
+            id={toDo.id}
+            title={toDo.title}
+            description={toDo.description}
+            status={toDo.status}
+          />
+        ))}
+      </tbody>
+    </>
   );
 };

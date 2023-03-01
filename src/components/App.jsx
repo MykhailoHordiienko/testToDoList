@@ -3,14 +3,7 @@ import { ToDoTable } from './ToDoTable/ToDoTable';
 
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        padding: 20,
-        fontSize: 20,
-        color: '#010101',
-      }}
-    >
+    <div className="app">
       <ToDoForm />
       <ToDoTable />
     </div>

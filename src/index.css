@@ -13,3 +13,62 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h2 {
+  margin-bottom: 0;
+}
+
+tr {
+  border: 1px dashed yellow;
+}
+
+.app {
+  height: 100vh;
+  padding: 20px;
+  font-size: 20px;
+  color: #010101;
+}
+
+.table-item-text {
+  display: block;
+  width: 200px;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.status-input {
+  cursor: pointer;
+}
+
+.form-input-wrapper {
+  display: inline-block;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1200;
+}
+
+.modal {
+  min-width: 500px;
+  min-height: 500px;
+  padding: 20px;
+  max-width: calc(100vw - 200px);
+  max-height: calc(100vh - 200px);
+  background: white;
+}
+
+.closebtn {
+  display: block;
+  margin: 20px 20px 0 auto;
+}
